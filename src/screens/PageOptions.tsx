@@ -2,26 +2,18 @@ import React from 'react'
 import { StyleSheet, Text, View, TouchableOpacity, Image, ScrollView} from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 import { Card } from 'react-native-paper';
+import { propsStack } from '../routes/Stack/Models'
+import Header from '../components/header';
 
 const App = () => {
-    const navigation = useNavigation()
+    const navigation = useNavigation<propsStack>()
     return (
 
     <ScrollView style={styles.containerBody}> 
 
         {/* Header */}
-            <View style={styles.containerHeader}> 
-
-                <TouchableOpacity  onPress={() => navigation.goBack()}>
-                    <Image style={{width: 30, height: 30, marginTop: 15}} source={require('../assets/voltar.png')} />
-                </TouchableOpacity>
-
-                    <Image style={{width: 60, height: 55, marginTop: 7,}} source={require('../assets/barba.png')} />
-
-                <TouchableOpacity  onPress={() => navigation.goBack()}>
-                    <Image style={{width: 30, height: 30, marginTop: 15,}} source={require('../assets/proximo.png')} />
-                </TouchableOpacity>
-
+            <View>
+                <Header /> 
             </View >
 
         {/* Body */}
@@ -32,7 +24,7 @@ const App = () => {
                 <View style={styles.containerOptionsFlex}>
 
                     <View>
-                        <TouchableOpacity style={styles.containerOptions}>
+                        <TouchableOpacity style={styles.containerOptions} onPress={() => navigation.navigate("Scheduling")}>
                         <Image style={{width: 35, height: 35, marginRight: 20, marginBottom: 20, marginTop: 20}} source={require('../assets/calendario.png')} />
                         <Text style={styles.fontText}>Agendamento</Text>
                         </TouchableOpacity>
@@ -82,11 +74,6 @@ const App = () => {
 export default App 
 
 const styles = StyleSheet.create({
-    containerHeader: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        backgroundColor: '#3B3F49'
-    },
     containerBody: {
         backgroundColor: '#FAEDDF',
     },
