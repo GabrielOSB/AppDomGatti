@@ -45,7 +45,7 @@ const App = () => {
                     </View>
 
                     <View>
-                        <TouchableOpacity style={styles.containerOptions}>
+                        <TouchableOpacity style={styles.containerOptions} onPress={() => navigation.navigate("Maps")}>
                         <Image style={{width: 30, height: 30, marginRight: 20, marginBottom: 20, marginTop: 20}} source={require('../assets/maps.png')} />
                         <Text style={styles.fontText}>Maps</Text>
                         </TouchableOpacity>
