@@ -2,12 +2,34 @@ import React from "react";
 import { StyleSheet, View, ScrollView, Text, TouchableOpacity} from 'react-native'
 
 import  Header  from '../components/header'
-import {Calendar} from 'react-native-calendars';
+import {Calendar, LocaleConfig} from 'react-native-calendars';
 import { Card, Button } from 'react-native-paper';
+
+LocaleConfig.locales['BR'] = {
+    monthNames: [
+      'Janeiro',
+      'Fevereiro',
+      'Março',
+      'Abril',
+      'Maio',
+      'Junho',
+      'Julho',
+      'Agosto',
+      'Setembro',
+      'Outubro',
+      'Novembro',
+      'Dezembro'
+    ],
+    monthNamesShort: ['Jan.', 'Fev.', 'Mar', 'Abril', 'Mai', 'Jun', 'Jul.', 'Ago', 'Set.', 'Out.', 'Nov.', 'Dez.'],
+    dayNames: ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sabado'],
+    dayNamesShort: ['Dom.', 'Seg.', 'Ter.', 'Qua.', 'Qui.', 'Sex.', 'Sab.'],
+    today: "Aujourd'hui"
+  };
+  LocaleConfig.defaultLocale = 'BR';
 
 const App = () => {
     return(
-    <ScrollView> 
+    <ScrollView style={styles.global}> 
 
         {/* Header */}
         <View>
@@ -94,6 +116,9 @@ const styles = StyleSheet.create({
       flex: 1,
       backgroundColor: '#fff',
       marginBottom: 35
+    },
+    global:{
+        backgroundColor: '#FAEDDF'
     },
     viewCard: {
         flexDirection: 'row',

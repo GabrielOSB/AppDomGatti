@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Home from "../../screens/PageHome"
 import Options from "../../screens/PageOptions"
 import Scheduling from "../../screens/PageScheduling"
+import Contato from "../../screens/PageContato"
 
 import { propsNavigationStack } from "./Models";
 
@@ -15,6 +16,7 @@ export default function() {
             <Screen name="Home" component={Home} /> 
             <Screen name="Option" component={Options} /> 
             <Screen name="Scheduling" component={Scheduling} /> 
+            <Screen name="Contato" component={Contato} /> 
         </Navigator>
     )
 }
