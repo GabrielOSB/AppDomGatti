@@ -1,11 +1,13 @@
 import React from "react";
 import { StyleSheet, View, ScrollView, Text, TouchableOpacity} from 'react-native'
+import { propsStack } from '../routes/Stack/Models'
+import { useNavigation } from '@react-navigation/native'
 
 import  Header  from '../components/header'
 import {Calendar, LocaleConfig} from 'react-native-calendars';
 import { Card, Button } from 'react-native-paper';
 
-LocaleConfig.locales['BR'] = {
+LocaleConfig.locales.BR = {
     monthNames: [
       'Janeiro',
       'Fevereiro',
@@ -23,11 +25,12 @@ LocaleConfig.locales['BR'] = {
     monthNamesShort: ['Jan.', 'Fev.', 'Mar', 'Abril', 'Mai', 'Jun', 'Jul.', 'Ago', 'Set.', 'Out.', 'Nov.', 'Dez.'],
     dayNames: ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sabado'],
     dayNamesShort: ['Dom.', 'Seg.', 'Ter.', 'Qua.', 'Qui.', 'Sex.', 'Sab.'],
-    today: "Aujourd'hui"
+    today: "Hoje"
   };
   LocaleConfig.defaultLocale = 'BR';
 
 const App = () => {
+    const navigation = useNavigation<propsStack>()
     return(
     <ScrollView style={styles.global}> 
 
@@ -45,11 +48,15 @@ const App = () => {
         </View>
 
         {/* Horarios */}
+        
+
         <View style={styles.viewCard}>
 
             <Card style={styles.card}>
                 <TouchableOpacity>
-                    <Text style={styles.textCards}>
+                    <Text style={styles.textCards}
+                    onPress={text => {console.log(text)}}
+                    >
                         09:00
                     </Text>
                 </TouchableOpacity>
@@ -100,7 +107,34 @@ const App = () => {
         </View>
 
         <View style={styles.viewCard}>
-        <Button  style={styles.button} mode="contained" onPress={() => console.log('Pressed')} uppercase={true} >
+            
+            <Card style={styles.card}>
+                <TouchableOpacity>
+                    <Text style={styles.textCards}>
+                        16:00
+                    </Text>
+                </TouchableOpacity>
+            </Card>
+
+            <Card style={styles.card}>
+                <TouchableOpacity>
+                    <Text style={styles.textCards}>
+                        17:00
+                    </Text>
+                </TouchableOpacity>
+            </Card>
+
+            <Card style={styles.card}>
+                <TouchableOpacity>
+                    <Text style={styles.textCards}>
+                        18:00
+                    </Text>
+                </TouchableOpacity>
+            </Card>
+        </View>
+
+        <View style={styles.viewCard}>
+        <Button  style={styles.button} mode="contained" onPress={() => console.log('Cadastrar')} uppercase={true} >
             Confirmar
         </Button>
         </View>
@@ -142,6 +176,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#F7A29E',
         fontFamily: 'RussoOne-Regular',
         fontSize: 18,
+        marginBottom: 20
     },
     text: {
         color: '#fff',

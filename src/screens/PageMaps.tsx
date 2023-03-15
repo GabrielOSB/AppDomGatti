@@ -25,9 +25,9 @@ const App = () => {
 
             <Card style={styles.card}>
                 <Card.Content>
-                    <Text style={styles.textCard}>Local: </Text>
-                    <Text style={styles.textSecondary}>Ponto de Referencia:</Text>
-                    <Text style={styles.textSecondary}>Cep:</Text>
+                    <Text style={styles.textCard}>Local:   Rua Alexandre Coelho, 403</Text>
+                    <Text style={styles.textSecondary}>Ponto de Referencia:  Prox. A escola Godoy</Text>
+                    <Text style={styles.textSecondary}>Cep:  07133-190   Guarulhos - SP</Text>
                 </Card.Content>
             </Card>
 

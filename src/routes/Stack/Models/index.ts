@@ -6,6 +6,7 @@ export type propsNavigationStack = {
     Scheduling: undefined
     Contato: undefined
     Maps: undefined
+    Register: undefined
 }
 
 export type propsStack = NativeStackNavigationProp<propsNavigationStack>

@@ -24,7 +24,7 @@ const App = () => {
                 <View style={styles.containerOptionsFlex}>
 
                     <View>
-                        <TouchableOpacity style={styles.containerOptions} onPress={() => navigation.navigate("Scheduling")}>
+                        <TouchableOpacity style={styles.containerOptions} onPress={() => navigation.navigate("Register")}>
                         <Image style={{width: 35, height: 35, marginRight: 20, marginBottom: 20, marginTop: 20}} source={require('../assets/calendario.png')} />
                         <Text style={styles.fontText}>Agendamento</Text>
                         </TouchableOpacity>
@@ -33,7 +33,7 @@ const App = () => {
                     <View>
                         <TouchableOpacity style={styles.containerOptions}>
                         <Image style={{width: 35, height: 35, marginRight: 20, marginBottom: 20, marginTop: 20}} source={require('../assets/calendario-no-color.png')} />
-                        <Text style={styles.fontText}>Cancelamento</Text>
+                        <Text style={styles.fontTextCancelamento}>Cancelamento</Text>
                         </TouchableOpacity>
                     </View>
 
@@ -98,6 +98,13 @@ const styles = StyleSheet.create({
         fontSize: 18,
         fontFamily: 'RussoOne-Regular',
         color: 'black',
+    },
+    fontTextCancelamento:{
+        marginBottom: 20, 
+        marginTop: 20,
+        fontSize: 18,
+        fontFamily: 'RussoOne-Regular',
+        color: 'gray',
     },
     containerAgendamento: {
         backgroundColor: '#3B3F49',
