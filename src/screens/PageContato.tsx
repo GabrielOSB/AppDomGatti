@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, View, ScrollView} from 'react-native'
+import { StyleSheet, Text, View, ScrollView, Image} from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 import { propsStack } from '../routes/Stack/Models'
 
@@ -25,7 +25,12 @@ const App = () => {
 
             <Card style={styles.card}>
                 <Card.Content>
-                    <Text style={styles.textCard}>Nome do Barbeiro</Text>
+
+                    <View style={styles.containerCards}>
+                        <Image style={{ width: 60, height: 55, borderRadius: 50, marginBottom: 10}} source={require('../assets/photo-profile.jpg')} />
+                        <Text style={styles.textCard}>Nome do Barbeiro</Text>
+                    </View>
+
                     <Text style={styles.textSecondary}>Whatsapp: xxxxx-xxxx</Text>
                     <Text style={styles.textSecondary}>Instagram: @Exemplo</Text>
                 </Card.Content>
@@ -33,7 +38,10 @@ const App = () => {
 
             <Card style={styles.card}>
                 <Card.Content>
-                    <Text style={styles.textCard}>Nome do Barbeiro</Text>
+                    <View style={styles.containerCards}>
+                        <Image style={{ width: 60, height: 55, borderRadius: 50, marginBottom: 10 }} source={require('../assets/photo-profile.jpg')} />
+                        <Text style={styles.textCard}>Nome do Barbeiro</Text>
+                    </View>
                     <Text style={styles.textSecondary}>Whatsapp: xxxxx-xxxx</Text>
                     <Text style={styles.textSecondary}>Instagram: @Exemplo</Text>
                 </Card.Content>
@@ -50,6 +58,10 @@ const styles = StyleSheet.create({
     global:{
         backgroundColor: '#FAEDDF'
     },
+    containerCards: {
+        flexDirection: 'row',
+        alignItems: 'center'
+    },
     text:{
         fontFamily: 'RussoOne-Regular',
         fontSize: 20,
@@ -63,6 +75,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         marginTop: 10,
         marginBottom: 10,
+        marginLeft: 10,
         fontSize: 15,
         color: '#F7A29E'
     },

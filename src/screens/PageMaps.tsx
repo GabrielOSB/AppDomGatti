@@ -1,10 +1,10 @@
 import React from 'react'
-import { StyleSheet, Text, View, ScrollView} from 'react-native'
+import { StyleSheet, Text, View, ScrollView, Linking } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 import { propsStack } from '../routes/Stack/Models'
 
 import Header from '../components/header';
-import { Card } from 'react-native-paper';
+import { Card, Button } from 'react-native-paper';
 
 const App = () => {
     const navigation = useNavigation<propsStack>()
@@ -30,6 +30,12 @@ const App = () => {
                     <Text style={styles.textSecondary}>Cep:  07133-190   Guarulhos - SP</Text>
                 </Card.Content>
             </Card>
+
+            <Button style={styles.button} mode="contained" onPress={() => {
+                Linking.openURL('google.navigation:q=100+101');
+            }} uppercase={true} >
+                Continuar
+            </Button>
 
     </ScrollView>
     )
@@ -69,5 +75,12 @@ const styles = StyleSheet.create({
         fontFamily: 'RussoOne-Regular',
         fontSize: 13,
         marginBottom: 10
-    }
+    },
+    button: {
+        backgroundColor: '#F7A29E',
+        fontFamily: 'RussoOne-Regular',
+        fontSize: 18,
+        marginBottom: 20,
+        
+    },
 })
