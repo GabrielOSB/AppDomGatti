@@ -32,7 +32,6 @@ const App = () => {
                 style={style.input}
                 mode="outlined"
                 label="Nome Completo"
-                value={text}
                 placeholder=""
                 right={<TextInput.Affix/>}
                 />

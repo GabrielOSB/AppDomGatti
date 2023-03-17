@@ -11,7 +11,7 @@ const Header = () => {
                 <Image style={{ width: 30, height: 30, marginTop: 15 }} source={require('../assets/voltar.png')} />
             </TouchableOpacity>
 
-            <Image style={{ width: 60, height: 55, marginTop: 7, }} source={require('../assets/barba.png')} />
+            <Image style={styles.barba} source={require('../assets/barba.png')} />
 
             <TouchableOpacity onPress={() => navigation.goBack()}>
                 <Image style={{ width: 30, height: 30, marginTop: 15, }} source={require('../assets/proximo.png')} />
@@ -27,5 +27,13 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         backgroundColor: '#3B3F49'
+    },
+    barba: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: 60, 
+        height: 55, 
+        marginTop: 7,
     }
 })

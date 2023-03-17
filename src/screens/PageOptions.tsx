@@ -31,7 +31,7 @@ const App = () => {
                     </View>
 
                     <View>
-                        <TouchableOpacity style={styles.containerOptions}>
+                        <TouchableOpacity style={styles.containerOptions} onPress={() => navigation.navigate("Cancellation")}>
                         <Image style={{width: 35, height: 35, marginRight: 20, marginBottom: 20, marginTop: 20}} source={require('../assets/calendario-no-color.png')} />
                         <Text style={styles.fontTextCancelamento}>Cancelamento</Text>
                         </TouchableOpacity>

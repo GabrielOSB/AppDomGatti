@@ -32,7 +32,7 @@ const App = () => {
             </Card>
 
             <Button style={styles.button} mode="contained" onPress={() => {
-                Linking.openURL('google.navigation:q=100+101');
+                Linking.openURL('google.navigation:q=Barbearia Dom Gatti - Rua Alexandre Coelho - Jardim Divinolandia, Guarulhos - SP');
             }} uppercase={true} >
                 Continuar
             </Button>
