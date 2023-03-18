@@ -34,7 +34,7 @@ const App = () => {
             <Button style={styles.button} mode="contained" onPress={() => {
                 Linking.openURL('google.navigation:q=Barbearia Dom Gatti - Rua Alexandre Coelho - Jardim Divinolandia, Guarulhos - SP');
             }} uppercase={true} >
-                Continuar
+                Abrir Google Maps
             </Button>
 
     </ScrollView>
@@ -81,6 +81,7 @@ const styles = StyleSheet.create({
         fontFamily: 'RussoOne-Regular',
         fontSize: 18,
         marginBottom: 20,
-        
+        marginEnd: 80,
+        marginStart: 80
     },
 })
