@@ -8,6 +8,7 @@ import Contato from "../../screens/PageContato"
 import Maps from "../../screens/PageMaps"
 import Register from "../../screens/PageRegister"
 import Cancellation from "../../screens/PageCancellation"
+import Price from "../../screens/PagePrice"
 
 import { propsNavigationStack } from "./Models";
 
@@ -23,6 +24,7 @@ export default function() {
             <Screen name="Maps" component={Maps} /> 
             <Screen name="Register" component={Register} /> 
             <Screen name="Cancellation" component={Cancellation} /> 
+            <Screen name="Price" component={Price} /> 
         </Navigator>
     )
 }

@@ -61,9 +61,7 @@ const App = () => {
 
             <Card style={styles.card}>
                 <TouchableOpacity>
-                    <Text style={styles.textCards}
-                    onPress={text => {console.log(text)}}
-                    >
+                    <Text style={styles.textCards}>
                         09:00
                     </Text>
                 </TouchableOpacity>
@@ -141,8 +139,8 @@ const App = () => {
         </View>
 
         <View style={styles.viewCard}>
-        <Button  style={styles.button} mode="contained" onPress={() => console.log('Cadastrar')} uppercase={true} >
-            Confirmar
+        <Button  style={styles.button} mode="contained" onPress={() => navigation.navigate("Price")} uppercase={true} >
+            Continuar
         </Button>
         </View>
 
