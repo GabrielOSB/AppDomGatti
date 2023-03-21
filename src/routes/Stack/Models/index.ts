@@ -9,6 +9,7 @@ export type propsNavigationStack = {
     Register: undefined
     Cancellation: undefined
     Price: undefined
+    Confirm: undefined
 }
 
 export type propsStack = NativeStackNavigationProp<propsNavigationStack>

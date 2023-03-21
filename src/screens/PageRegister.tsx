@@ -89,5 +89,7 @@ const style = StyleSheet.create({
         fontFamily: 'RussoOne-Regular',
         fontSize: 18,
         marginTop: 20,
+        marginEnd: 80,
+        marginStart: 80,
     },
 })

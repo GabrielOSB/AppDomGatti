@@ -9,6 +9,7 @@ import Maps from "../../screens/PageMaps"
 import Register from "../../screens/PageRegister"
 import Cancellation from "../../screens/PageCancellation"
 import Price from "../../screens/PagePrice"
+import Confirm from "../../screens/PageConfirm"
 
 import { propsNavigationStack } from "./Models";
 
@@ -25,6 +26,7 @@ export default function() {
             <Screen name="Register" component={Register} /> 
             <Screen name="Cancellation" component={Cancellation} /> 
             <Screen name="Price" component={Price} /> 
+            <Screen name="Confirm" component={Confirm} /> 
         </Navigator>
     )
 }

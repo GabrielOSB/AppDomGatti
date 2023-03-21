@@ -81,8 +81,8 @@ const App = () => {
 
             </View>
 
-            <Button style={style.button} mode="contained" onPress={() => console.log()} uppercase={true} >
-                    Continuar
+            <Button style={style.button} mode="contained" onPress={() => navigation.navigate("Confirm")} uppercase={true} >
+                    Confirmar
             </Button>
 
         </ScrollView>
