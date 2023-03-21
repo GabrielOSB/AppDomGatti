@@ -44,12 +44,13 @@ const App = () => {
                  onDayPress={date => {console.log(date)}}  
                  hideExtraDays={true}
                  hideArrows={true}
+                 
 
                  theme={{
                     calendarBackground: '#3B3F49',
                     dayTextColor: '#FAEDDF',
                     textDisabledColor: '#444',
-                    monthTextColor: '#FAEDDF'
+                    monthTextColor: '#FAEDDF',
                   }}
             />
         </View>

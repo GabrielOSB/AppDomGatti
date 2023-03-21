@@ -22,8 +22,8 @@ const App = () => {
 
                     <View style={styles.containerButton}> 
 
-                        <Button style={styles.buttonNegative} mode="contained" onPress={() => {
-                        }} uppercase={true} textColor={'#3B3F49'}>
+                        <Button style={styles.buttonNegative} mode="contained" onPress={() => navigation.navigate("Home")}
+                         uppercase={true} textColor={'#3B3F49'}>
                             Não
                         </Button>
 

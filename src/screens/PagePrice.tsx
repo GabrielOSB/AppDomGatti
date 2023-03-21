@@ -49,7 +49,7 @@ const App = () => {
 
                 </View>
 
-                <View style={style.cardRight}>
+                <View>
                     <View>
 
                         <TouchableOpacity>
@@ -107,10 +107,6 @@ const style = StyleSheet.create({
         marginRight: 20,
     },
 
-    cardRight: {
-
-    },
-
     cards: {
         marginBottom: 20,
         backgroundColor: '#3B3F49'
@@ -118,13 +114,15 @@ const style = StyleSheet.create({
 
     textCardTitle: {
         textAlign: 'center',
-        color: '#F7A29E'
+        color: '#F7A29E',
+        fontFamily: 'RussoOne-Regular',
     },
 
     textCard: {
         marginTop: 10,
         textAlign: 'center',
-        color: '#F7A29E'
+        color: '#F7A29E',
+        fontFamily: 'RussoOne-Regular',
     },
 
     button: {
